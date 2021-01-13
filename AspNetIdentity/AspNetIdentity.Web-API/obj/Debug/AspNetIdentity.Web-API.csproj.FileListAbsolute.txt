@@ -1,2 +1,0 @@
-C:\Learning\Git Work\AspNetIdentity\AspNetIdentity.Web-API\obj\Debug\AspNetIdentity.Web-API.csprojAssemblyReference.cache
-C:\Learning\Git Work\AspNetIdentity\AspNetIdentity.Web-API\obj\Debug\AspNetIdentity.Web-API.csproj.CoreCompileInputs.cache
