@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using AspNetIdentity.IdentityWebAPI.Services;
+using AspNetIdentity.IdentityWebAPI.Validators;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
@@ -21,7 +23,60 @@ namespace AspNetIdentity.IdentityWebAPI.Infrastructure
             var appDbContext = context.Get<ApplicationDbContext>();
             var appUserManager = new ApplicationUserManager(new UserStore<ApplicationUser>(appDbContext));
 
-            //// Configure validation logic for usernames
+            //Code for email confirmation and reset password life time
+            appUserManager.EmailService = new EmailService();
+            var dataProtectionProvider = options.DataProtectionProvider;
+
+            if(dataProtectionProvider != null)
+            {
+                appUserManager.UserTokenProvider = new DataProtectorTokenProvider<ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"))
+                {
+                    TokenLifespan = TimeSpan.FromHours(6)
+                };
+            }
+            //end
+            // Configure validation logic for usernames
+            appUserManager.UserValidator = new UserValidator<ApplicationUser>(appUserManager)
+            {
+                AllowOnlyAlphanumericUserNames = true,
+                RequireUniqueEmail = true
+            };
+
+            //end
+            //for using custom validator start
+
+            //appUserManager.UserValidator = new MyCustomUserValidator(appUserManager)
+            //{
+            //    AllowOnlyAlphanumericUserNames = true,
+            //    RequireUniqueEmail = true
+            //};
+
+            //for using custom validator end
+            //Configure validation logic for passwords
+            appUserManager.PasswordValidator = new PasswordValidator()
+            {
+                RequiredLength = 6,
+                RequireNonLetterOrDigit = true,
+                RequireDigit = false,
+                RequireLowercase = true,
+                RequireUppercase = true
+            };
+            //end
+            //for using custom password validator start
+
+            //appUserManager.PasswordValidator = new MyCustomPasswordValidator()
+            //{
+            //    RequiredLength = 6,
+            //    RequireNonLetterOrDigit = true,
+            //    RequireDigit = false,
+            //    RequireLowercase = true,
+            //    RequireUppercase = true
+            //};
+
+            //for using custom password validator end
+
+
+
             //appUserManager.UserValidator = new UserValidator<ApplicationUser>(appUserManager)
             //{
             //    AllowOnlyAlphanumericUserNames = true,
