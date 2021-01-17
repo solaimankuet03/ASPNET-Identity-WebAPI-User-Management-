@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Security.Claims;
+using Microsoft.AspNet.Identity;
+using System.Threading.Tasks;
 
 namespace AspNetIdentity.IdentityWebAPI.Infrastructure
 {
@@ -19,5 +22,12 @@ namespace AspNetIdentity.IdentityWebAPI.Infrastructure
         public byte Level { get; set; }
         [Required]
         public DateTime JoinDate { get; set; }
+
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
+        {
+            var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
+
+            return userIdentity;
+        }
     }
 }
