@@ -186,3 +186,15 @@ C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAP
 C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\StarkbankEcdsa.dll
 C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\SendGrid.pdb
 C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\SendGrid.xml
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.IdentityModel.Logging.dll
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Thinktecture.IdentityModel.Core.dll
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.IdentityModel.Logging.xml
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Thinktecture.IdentityModel.Core.pdb
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Learning\Git Work\ASPNET-Identity\AspNetIdentity\AspNetIdentity.IdentityWebAPI\bin\Microsoft.Owin.Security.Jwt.xml
